@@ -9,8 +9,6 @@ export class CalcController {
   @Post('/')
   calc(@Body() calcBody: CalcDto) {
     const result = this.calcService.calculateExpression(calcBody);
-    return {
-      result,
-    };
+    return { result };
   }
 }
